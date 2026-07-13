@@ -25,13 +25,16 @@ my-fashion-mnist-project/
     ├── loss_plot.png              # - 시각화된 손실(Loss) 그래프 결과
     ├── model_weights.pth          # - 학습이 완료된 모델 가중치 파일
     └── result.json                # - 각 단계별 학습 결과 및 평가지표 기록 (JSON)
+
 ## 🚀 실행 및 실험 방법
 
 ### 1. 전체 모델 비교 학습 (기본)
 MLP 모델과 CNN 모델을 연속으로 학습시키고 최종 성능을 비교하려면 아래 명령어를 실행합니다.
+
 ```bash
 python training/train.py
 ```
+
 def main():
     # ... (생략) ...
     
