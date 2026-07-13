@@ -31,7 +31,7 @@ my-fashion-mnist-project/
 MLP 모델과 CNN 모델을 연속으로 학습시키고 최종 성능을 비교하려면 아래 명령어를 실행합니다.
 ```bash
 python training/train.py
-'''
+```
 def main():
     # ... (생략) ...
     
