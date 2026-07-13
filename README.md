@@ -25,3 +25,21 @@ my-fashion-mnist-project/
     ├── loss_plot.png              # - 시각화된 손실(Loss) 그래프 결과
     ├── model_weights.pth          # - 학습이 완료된 모델 가중치 파일
     └── result.json                # - 각 단계별 학습 결과 및 평가지표 기록 (JSON)
+## 🚀 실행 및 실험 방법
+
+### 1. 전체 모델 비교 학습 (기본)
+MLP 모델과 CNN 모델을 연속으로 학습시키고 최종 성능을 비교하려면 아래 명령어를 실행합니다.
+```bash
+python training/train.py
+
+def main():
+    # ... (생략) ...
+    
+    # 1. MLP만 테스트하고 싶을 때: CNN 호출 부분을 주석 처리(#)합니다.
+    mlp_model = MLPClassifier().to(device)
+    mlp_history, mlp_best = train_model("mlp", mlp_model, train_loader, test_loader, device)
+    all_history["mlp"] = mlp_history
+
+    # 2. CNN만 테스트하고 싶을 때: MLP 호출 부분을 주석 처리(#)합니다.
+    # cnn_model = CNNClassifier().to(device)
+    # cnn_history, cnn_best = train_model("cnn", cnn_model, train_loader, test_loader, device)
